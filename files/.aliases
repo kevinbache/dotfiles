@@ -6,6 +6,7 @@ alias newalias="vim ~/.aliases && source ~/.aliases"
 alias newfunc="vim ~/.functions && source ~/.functions"
 alias newgit="vim ~/.gitconfig"
 alias newssh="vim ~/.ssh/config"
+alias newvim="vim ~/.vimrc"
 
 alias editinput="vim ~/.inputrc && include ~/.inputrc"
 alias editprof="vim ~/.bash_profile && source ~/.bash_profile"
@@ -18,6 +19,7 @@ alias cdp="cd ~/projects"
 alias cdk="cd ~/projects/kubeflow"
 alias cdpi="cd ~/projects/kubeflow/pipelines"
 alias cdkp="cdpi"
+alias cdot="cd ~/projects/dotfiles"
 
 alias ..='cd ..'
 alias ...='cd ../..'

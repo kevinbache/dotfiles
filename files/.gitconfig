@@ -1,0 +1,21 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Kevin Bache
+	email = kevin.bache@gmail.com
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  syncup = !git fetch upstream && git checkout master && git merge upstream/master "$1"
+  unadd = reset
+
+[core]
+	pager = less -R
+
+[push]
+	default = current

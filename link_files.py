@@ -6,6 +6,10 @@ def vprint(message=""):
     if verbose:
         print(message)
 
+def print_list(l):
+    for e in l:
+        print('  {}'.format(e))
+
 
 this_dir = Path(__file__).parent.resolve()
 local_files_dir = this_dir / 'files'
@@ -14,12 +18,6 @@ target_dir = Path.home()
 files_to_link_absolute = [f for f in local_files_dir.rglob('*') if not f.is_dir()]
 files_to_link_relative = [f.relative_to(local_files_dir) for f in files_to_link_absolute]
 target_files = [target_dir.joinpath(f) for f in files_to_link_relative]
-
-
-def print_list(l):
-    for e in l:
-        print('  {}'.format(e))
-
 
 print()
 print("Files to Link:")

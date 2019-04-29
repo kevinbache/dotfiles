@@ -56,9 +56,9 @@ if any([f.exists() for f in target_files]):
         if not this_backup_dir.exists():
             vprint("  Making backup subdir: {}".format(this_backup_dir))
             this_backup_dir.mkdir(parents=True, exist_ok=True)
-    vprint("")
 
 for local_file, relative_file, target_file in zip(files_to_link_absolute, files_to_link_relative, target_files):
+    vprint()
     vprint("Starting file {}".format(local_file))
 
     if not local_file.is_dir():

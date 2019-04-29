@@ -47,6 +47,7 @@ if any([f.exists() for f in target_files]):
     while backup_dir.exists():
         backup_dir = target_dir / '{}_{}'.format(backup_dir_name, backup_counter)
         backup_counter += 1
+    vprint()
     vprint("Making backup dir: {}".format(backup_dir))
     Path.mkdir(backup_dir, parents=True, exist_ok=True)
 

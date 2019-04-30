@@ -20,13 +20,16 @@ alias cdk="cd ~/projects/kubeflow"
 alias cdpi="cd ~/projects/kubeflow/pipelines"
 alias cdkp="cdpi"
 alias cdot="cd ~/projects/dotfiles"
+alias cdd="cdot"
 
 alias ..='cd ..'
 alias ...='cd ../..'
 
 alias gp="git pull"
 alias gs="git status"
+alias gcam="git commit -am"
 
+:wq
 alias kubedelall_really="kubectl delete daemonsets,replicasets,services,deployments,pods,rc --all"
 alias kubeshowall="kubectl -n kubeflow get all"
 

@@ -46,3 +46,4 @@ let g:palenight_terminal_italics=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number relativenumber
+set ignorecase smartcase

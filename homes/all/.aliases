@@ -21,6 +21,8 @@ alias cdpi="cd ~/projects/kubeflow/pipelines"
 alias cdkp="cdpi"
 alias cdot="cd ~/projects/dotfiles"
 alias cdd="cdot"
+alias cdf="cd ~/projects/kubeflow/fairing"
+alias cdr="cd ~/projects/ritalin"
 
 alias ..='cd ..'
 alias ...='cd ../..'

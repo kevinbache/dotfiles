@@ -73,3 +73,11 @@ if [ -f '/Users/bache/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/User
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/bache/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/bache/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+# from https://g3doc.corp.google.com/company/teams/mac-road-warrior/index.md?cl=head#homebrew
+# Global stuff
+export PATH=$HOME/bin:$PATH
+# Homebrew stuff
+export PATH=$HOME/homebrew/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/homebrew/lib:$LD_LIBRARY_PATH
+

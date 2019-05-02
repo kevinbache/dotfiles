@@ -82,5 +82,3 @@ if __name__ == '__main__':
         files_to_link_relative += relative_extra
 
     link_files(files_to_link_absolute, files_to_link_relative, target_dir)
-
-

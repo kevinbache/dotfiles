@@ -5,7 +5,7 @@ alias sudo='sudo '
 
 export ADDONS="~/.profile_addons"
 
-alias newalias="vim ${ADDONS}/aliases.sh && source ${ADDONS}/alises.sh"
+alias newalias="vim ${ADDONS}/aliases.sh && source ${ADDONS}/aliases.sh"
 alias newfunc="vim ${ADDONS}/functions.sh && source ${ADDONS}/functions.sh"
 alias newgit="vim ~/.gitconfig"
 alias newssh="vim ~/.ssh/config"

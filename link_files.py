@@ -24,7 +24,7 @@ def link_files(files_to_link_absolute, files_to_link_relative, target_dir, verbo
     vprint("Files to Link:")
     print_list(files_to_link_absolute)
     vprint()
-    vprint("Target all:")
+    vprint("Target home:")
     print_list(target_files)
 
     # Create target directories
@@ -72,13 +72,12 @@ def link_files(files_to_link_absolute, files_to_link_relative, target_dir, verbo
 
 if __name__ == '__main__':
     this_dir = Path(__file__).parent.resolve()
-    local_files_dir = this_dir / 'homes' / 'all'
     target_dir = Path.home()
 
-    files_to_link_absolute, files_to_link_relative = gather_local_files(local_files_dir)
+    files_to_link_absolute, files_to_link_relative = gather_local_files(this_dir / 'all' / 'home')
 
     if platform.system() == 'Darwin':
-        absolute_extra, relative_extra = gather_local_files(this_dir / 'homes' / 'osx')
+        absolute_extra, relative_extra = gather_local_files(this_dir / 'osx' / 'home')
         files_to_link_absolute += absolute_extra
         files_to_link_relative += relative_extra
 

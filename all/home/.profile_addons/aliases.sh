@@ -38,6 +38,9 @@ alias kubeshowall="kubectl -n kubeflow get all"
 
 alias countlines="LC_CTYPE=C && LANG=C && git ls-files | xargs -n1 git blame --line-porcelain | sed -n 's/^author //p' | sort -f | uniq -ic | sort -nr"
 
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then
     # GNU `ls`
@@ -62,3 +65,9 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
+
+# Always enable colored `grep` output
+# Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'

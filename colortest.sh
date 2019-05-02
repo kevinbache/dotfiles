@@ -1,8 +1,8 @@
 #!/bin/bash
 
-useage() {
+usage() {
   printf "\n\e[1;4mAscii Escape Code Helper Utility\e[m\n\n"
-  printf "  \e[1mUseage:\e[m colors.sh [-|-b|-f|-bq|-fq|-?|?] [start] [end] [step]\n\n"
+  printf "  \e[1mUsage:\e[m colors.sh [-|-b|-f|-bq|-fq|-?|?] [start] [end] [step]\n\n"
   printf "The values for the first parameter may be one of the following:\n\n"
   printf "  \e[1m-\e[m  Will result in the default output.\n"
   printf "  \e[1m-b\e[m This will display the 8 color version of this chart.\n"
@@ -75,6 +75,6 @@ elif [[ "$1" == "" || "$1" == "-" ||  "$1" == "-f" ||  "$1" == "-q" ||  "$1" == 
     printf "\e[m\n"
     verbose "$1"
 else
-  useage
+  usage
 fi
 

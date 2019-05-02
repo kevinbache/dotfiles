@@ -1,3 +1,5 @@
+"""Create symlinks from appropriate files in home dir to dotfiles/all/home and also dotfiles/osx/home if on mac.
+"""
 from pathlib import Path
 import platform
 import shutil

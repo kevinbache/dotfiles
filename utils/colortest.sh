@@ -24,6 +24,7 @@ verbose() {
     printf "If \e[1m%s\e[m is not provided it will reset the display.\n\n" '{$value}'
   fi
 }
+
 eight_color() {
     local fgc bgc vals seq0
     if [ "$1" != "-bq" ]; then
@@ -77,4 +78,3 @@ elif [[ "$1" == "" || "$1" == "-" ||  "$1" == "-f" ||  "$1" == "-q" ||  "$1" == 
 else
   usage
 fi
-

@@ -29,9 +29,11 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 alias gp="git pull"
+alias gd="git diff"
 alias gs="git status"
 alias gcam="git commit -am"
 alias gam="gcam"
+
 
 alias kubedelall_really="kubectl delete daemonsets,replicasets,services,deployments,pods,rc --all"
 alias kubeshowall="kubectl -n kubeflow get all"

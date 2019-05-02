@@ -22,3 +22,8 @@ function whichpy ()
     PACKAGE=$1	
     python -c "import ${PACKAGE}; print(${PACKAGE}.__file__)"
 }
+
+function amp () 
+{
+    git commit -am $1 && git push;
+}

@@ -1,5 +1,6 @@
 # My Dotfiles
-This repo lets you keep your dotfiles and preferences under version control. 
+This repo lets you keep your dotfiles and preferences under version control without
+rooting a repo in `${HOME}`.
 
 Here's the basic idea: `all/home` contains a replica of a home
 directory for all *nix systems with all the preferences and dotfiles that you want.  

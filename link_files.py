@@ -1,4 +1,4 @@
-"""Create symlinks from appropriate files in home dir to dotfiles/all/home and also dotfiles/osx/home if on mac.
+"""Create symlinks from appropriate files in home dir to dotfiles/shared/home and also dotfiles/osx/home if on mac.
 """
 from pathlib import Path
 import platform
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     this_dir = Path(__file__).parent.resolve()
     homedir_dir = Path.home()
 
-    repo_files_absolute, repo_files_relative = gather_repo_files(this_dir / 'all' / 'home')
+    repo_files_absolute, repo_files_relative = gather_repo_files(this_dir / 'shared' / 'home')
 
     if platform.system() == 'Darwin':
         absolute_extra, relative_extra = gather_repo_files(this_dir / 'osx' / 'home')

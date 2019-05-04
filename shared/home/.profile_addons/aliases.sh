@@ -11,9 +11,9 @@ alias newgit="vim ~/.gitconfig"
 alias newssh="vim ~/.ssh/config"
 alias newvim="vim ~/.vimrc"
 
-alias edinput="vim ~/.inputrc && include ~/.inputrc"
-alias edprof="vim ~/.bash_profile && source ~/.bash_profile"
-alias edprompt="vim ${ADDONS}/bash_prompt.sh && source ${ADDONS}/bash_prompt.sh"
+alias ein="vim ~/.inputrc && include ~/.inputrc"
+alias eprof="vim ~/.bash_profile && source ~/.bash_profile"
+alias eprmpt="vim ${ADDONS}/bash_prompt.sh && source ${ADDONS}/bash_prompt.sh"
 
 alias cds="cd ~/projects/spin"
 alias cdp="cd ~/projects"
@@ -34,9 +34,13 @@ alias gs="git status"
 alias gcam="git commit -am"
 alias gam="gcam"
 
+alias k="kubernetes"
+alias kgp="kubectl get pods --shared-namespaces"
 
-alias kubedelall_really="kubectl delete daemonsets,replicasets,services,deployments,pods,rc --all"
-alias kubeshowall="kubectl -n kubeflow get all"
+alias cloud="gcloud container clusters get-credentials standard-cluster-1 --zone us-central1-a --project kb-experiment"
+
+alias kubedelall_really="kubectl delete daemonsets,replicasets,services,deployments,pods,rc --shared"
+alias kubeshowall="kubectl -n kubeflow get shared"
 
 alias countlines="LC_CTYPE=C && LANG=C && git ls-files | xargs -n1 git blame --line-porcelain | sed -n 's/^author //p' | sort -f | uniq -ic | sort -nr"
 
@@ -56,10 +60,10 @@ fi
 
 # alias la="ls -la | grep \"^d\" && ls -la | grep \"^-\" && ls -la | grep -E \"^d|^-\" -v | grep -v \"^total\""
 
-# List all files colorized in long format
+# List shared files colorized in long format
 alias l="ls -lF ${colorflag}"
 
-# List all files colorized in long format, including dot files
+# List shared files colorized in long format, including dot files
 alias ll="ls -laF ${colorflag}"
 
 # List only directories

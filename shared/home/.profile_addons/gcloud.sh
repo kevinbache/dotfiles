@@ -5,3 +5,5 @@ if [ -f '${HOME}/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '${HOME}/Do
 
 # The next line enables shell command completion for gcloud.
 if [ -f '${HOME}/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '${HOME}/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+export PATH=${HOME}/Downloads/google-cloud-sdk/bin:${PATH}

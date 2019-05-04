@@ -27,7 +27,7 @@ function vimwhich () { vim $(which $1); }
 
 # git commit **-am push**
 function amp () {
-    git commit -am $1 && git push;
+    git commit -am "$1" && git push;
 }
 
 # Change working directory to the top-most Finder window location

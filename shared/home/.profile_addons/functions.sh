@@ -32,7 +32,11 @@ function amp () {
 
 # Change working directory to the top-most Finder window location
 function cdf() { # short for `cdfinder`
-	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
+    cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
+}
+
+function kclone() { 
+    git clone git@github.com:kevinbache/${1}.git 
 }
 
 # Change working directory to the top-most Finder window location

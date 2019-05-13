@@ -24,6 +24,7 @@ alias cdot="cd ~/projects/dotfiles"
 alias cdd="cdot"
 alias cdf="cd ~/projects/kubeflow/fairing"
 alias cdr="cd ~/projects/ritalin"
+alias cdh="cd ~"
 
 alias ..='cd ..'
 alias ...='cd ../..'

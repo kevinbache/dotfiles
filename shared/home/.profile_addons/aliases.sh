@@ -37,7 +37,7 @@ alias gd="git diff"
 alias gs="git status"
 alias gcam="git commit -am"
 alias gam="gcam"
-alias gct="git commit -am transfer"
+alias gct="git commit -am transfer && git push"
 
 alias pie="pip install --editable ."
 

@@ -27,7 +27,7 @@ function vimwhich () { vim $(which $1); }
 
 # git commit **-am push**
 function amp () {
-    git commit -am "$1" && git push;
+    git commit -am "$@" && git push;
 }
 
 # Change working directory to the top-most Finder window location
@@ -38,3 +38,9 @@ function cdf() { # short for `cdfinder`
 function kclone() { 
     git clone git@github.com:kevinbache/${1}.git 
 }
+
+# Change working directory to the top-most Finder window location
+function kclone() { # short for `cdfinder`
+    git clone git@github.com:kevinbache/${1}.git
+}
+

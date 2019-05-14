@@ -24,19 +24,25 @@ alias cdot="cd ~/projects/dotfiles"
 alias cdd="cdot"
 alias cdf="cd ~/projects/kubeflow/fairing"
 alias cdr="cd ~/projects/ritalin"
+alias cdg="cd ~/projects/granola"
 alias cdh="cd ~"
 
 alias ..='cd ..'
 alias ...='cd ../..'
+
+alias gc="gcloud "
 
 alias gp="git pull"
 alias gd="git diff"
 alias gs="git status"
 alias gcam="git commit -am"
 alias gam="gcam"
+alias gct="git commit -am transfer"
+
+alias pie="pip install --editable ."
 
 alias k="kubernetes"
-alias kgp="kubectl get pods --shared-namespaces"
+alias kgp="kubectl get pods --all-namespaces"
 
 alias cloud="gcloud container clusters get-credentials standard-cluster-1 --zone us-central1-a --project kb-experiment"
 

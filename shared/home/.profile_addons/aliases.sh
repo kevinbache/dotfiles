@@ -36,6 +36,7 @@ alias gd="git diff"
 alias gs="git status"
 alias gcam="git commit -am"
 alias gam="gcam"
+alias gamp="amp"
 
 alias k="kubernetes"
 alias kgp="kubectl get pods --all-namespaces"

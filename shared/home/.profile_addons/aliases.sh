@@ -25,6 +25,7 @@ alias cdd="cdot"
 alias cdf="cd ~/projects/kubeflow/fairing"
 alias cdr="cd ~/projects/ritalin"
 alias cdg="cd ~/projects/granola"
+alias cdh="cd ~"
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -37,6 +38,9 @@ alias gs="git status"
 alias gcam="git commit -am"
 alias gam="gcam"
 alias gamp="amp"
+alias gct="git commit -am transfer"
+
+alias pie="pip install --editable ."
 
 alias k="kubernetes"
 alias kgp="kubectl get pods --all-namespaces"

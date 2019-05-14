@@ -38,6 +38,7 @@ alias gs="git status"
 alias gcam="git commit -am"
 alias gam="gcam"
 alias gct="git commit -am transfer && git push"
+alias gamp="amp"
 
 alias pie="pip install --editable ."
 

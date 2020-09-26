@@ -15,17 +15,28 @@ alias ein="vim ~/.inputrc && include ~/.inputrc"
 alias eprof="vim ~/.bash_profile && source ~/.bash_profile"
 alias eprmpt="vim ${ADDONS}/bash_prompt.sh && source ${ADDONS}/bash_prompt.sh"
 
+alias cdce="cd ~/projects/chillpill_examples"
+alias cdc="cd ~/projects/chillpill"
 alias cds="cd ~/projects/spin"
 alias cdp="cd ~/projects"
 alias cdk="cd ~/projects/kubeflow"
 alias cdpi="cd ~/projects/kubeflow/pipelines"
 alias cdkp="cdpi"
 alias cdot="cd ~/projects/dotfiles"
-alias cdd="cdot"
+#alias cdd="cdot"
 alias cdf="cd ~/projects/kubeflow/fairing"
 alias cdr="cd ~/projects/ritalin"
 alias cdg="cd ~/projects/granola"
 alias cdh="cd ~"
+alias cdt="cd ~/projects/tablestakes"
+alias cdd="cd ~/projects/tablestakes/js/docviz/"
+alias cdw="cd ~/projects/weblab/"
+#alias runweb="web-ext run --source-dir ~/projects/weblab/build/ --verbose --pref startup.homepage_welcome_url=https://example.com"
+alias runweb="web-ext run --source-dir ~/projects/weblab/build/ --pref startup.homepage_welcome_url=https://example.com"
+alias cdwt="cd ~/projects/webpack_tryouts/"
+alias cdrt="cd ~/projects/raytest/"
+
+alias cdwa="cd ~/projects/wandb/"
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -39,6 +50,8 @@ alias gcam="git commit -am"
 alias gam="gcam"
 alias gct="git commit -am transfer && git push"
 alias gamp="amp"
+
+alias raypf="ray exec -p 8265 ~/projects/raytest/aws-simple.yaml 'while true; do sleep 10000; done'"
 
 alias pie="pip install --editable ."
 

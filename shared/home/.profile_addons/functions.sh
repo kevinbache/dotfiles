@@ -44,3 +44,6 @@ function kclone() { # short for `cdfinder`
     git clone git@github.com:kevinbache/${1}.git
 }
 
+function countlines2() {
+    find . -name '*.py' | xargs wc -l
+}

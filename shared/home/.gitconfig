@@ -96,3 +96,5 @@
 	pushInsteadOf = "github:"
     pushInsteadOf = "git://github.com/"
 
+[pull]
+	rebase = false

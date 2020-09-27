@@ -25,7 +25,6 @@ function whichpy () {
 
 function vimwhich () { vim $(which $1); }
 
-# git commit **-am push**
 function amp () {
     git commit -am "$@" && git push;
 }
@@ -37,11 +36,6 @@ function cdf() { # short for `cdfinder`
 
 function kclone() { 
     git clone git@github.com:kevinbache/${1}.git 
-}
-
-# Change working directory to the top-most Finder window location
-function kclone() { # short for `cdfinder`
-    git clone git@github.com:kevinbache/${1}.git
 }
 
 function countlines2() {

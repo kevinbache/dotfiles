@@ -27,7 +27,7 @@ def link_files(repo_files_absolute, repo_files_relative, homedir_dir, verbose=Tr
             raise ValueError("  Homedir directory, {}, is a symlink.  Unsure how to proceed.".format(d))
         elif not d.exists():
             vprint("  Creating directory {}".format(d))
-            Path.mkdir(d)
+            Path.mkdir(d, parents=True)
 
     # Figure out backup directory
     backup_dir = None

@@ -35,6 +35,7 @@ alias cdw="cd ~/projects/weblab/"
 alias runweb="web-ext run --source-dir ~/projects/weblab/build/ --pref startup.homepage_welcome_url=https://example.com"
 alias cdwt="cd ~/projects/webpack_tryouts/"
 alias cdrt="cd ~/projects/raytest/"
+alias cdpl="cd ~/projects/pytorch-lightning"
 
 alias cdwa="cd ~/projects/wandb/"
 

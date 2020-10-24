@@ -20,7 +20,7 @@ function title () {
 # like which for a python package name
 function whichpy () {
     PACKAGE=$1
-    python -c "import ${PACKAGE}; print(${PACKAGE}.__file__)"
+    python -c "import ${PACKAGE}; print(${PACKAGE}.__file__, ${PACKAGE}.__version__)"
 }
 
 function vimwhich () { vim $(which $1); }

@@ -25,11 +25,28 @@ alias cdkp="cdpi"
 alias cdot="cd ~/projects/dotfiles"
 #alias cdd="cdot"
 alias cdf="cd ~/projects/kubeflow/fairing"
-alias cdr="cd ~/projects/ritalin"
+alias cdr="cd ~/projects/ray"
 alias cdg="cd ~/projects/granola"
 alias cdh="cd ~"
 alias cdt="cd ~/projects/tablestakes"
-alias cdd="cd ~/projects/tablestakes/js/docviz/"
+alias cdd="cd ~/data/tablestakes/"
+alias cdds="cd ~/data/tablestakes/datasets/"
+alias cdtr="cd ~/projects/tablestakes/python/tablestakes/ml/ray_tune"
+alias cdl="cd ~/projects/lawplus/lawplus/"
+
+export RAY_CLUSTER_DIR='~/projects/tablestakes/python/tablestakes/ml/ray_tune'
+export RAY_CLUSTER_YAML="${RAY_CLUSTER_DIR}/aws-simple.yaml"
+alias pushts="ray rsync-up ${RAY_CLUSTER_YAML} ~/projects/tablestakes/python/ /home/ubuntu/projects/tablestakes/python -A"
+alias pushtd="ray rsync-up ${RAY_CLUSTER_YAML} ~/data/tablestakes/datasets/  /home/ubuntu/data/tablestakes/datasets/ -A"
+
+alias rsub1="ray submit ${RAY_CLUSTER_YAML} ${RAY_CLUSTER_DIR}/run_one.py"
+alias rsub="ray submit ${RAY_CLUSTER_YAML} ${RAY_CLUSTER_DIR}/tune_runner.py"
+alias ratch="ray attach ${RAY_CLUSTER_YAML}"
+alias rd="ray down ${RAY_CLUSTER_YAML}"
+alias ru="ray up ${RAY_CLUSTER_YAML} -y"
+
+
+
 alias cdw="cd ~/projects/weblab/"
 #alias runweb="web-ext run --source-dir ~/projects/weblab/build/ --verbose --pref startup.homepage_welcome_url=https://example.com"
 alias runweb="web-ext run --source-dir ~/projects/weblab/build/ --pref startup.homepage_welcome_url=https://example.com"

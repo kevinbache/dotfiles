@@ -58,7 +58,14 @@ def link_files(repo_files_absolute, repo_files_relative, homedir_dir, verbose=Tr
             shutil.move(str(homedir_file), str(this_backup_dir))
 
         vprint("  Symlinking {:80} to {:80}".format(str(homedir_file), str(repo_file_absolute)))
+
         homedir_file.symlink_to(repo_file_absolute)
+        # make sure the symlink has matching ownership stats to original file
+        repo_owner, repo_group = repo_file_absolute.owner(), repo_file_absolute.group()
+        repo_chmod = repo_file_absolute.stat().st_mode
+        homedir_file.chmod(repo_chmod)
+        shutil.chown(repo_file_absolute, user=repo_owner, group=repo_group)
+
     vprint("")
 
 
@@ -74,3 +81,5 @@ if __name__ == '__main__':
         repo_files_relative += relative_extra
 
     link_files(repo_files_absolute, repo_files_relative, homedir_dir)
+
+    # NOTE: this needs to be run with sudo to change permissions of plist files.

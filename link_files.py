@@ -80,6 +80,11 @@ if __name__ == '__main__':
         repo_files_absolute += absolute_extra
         repo_files_relative += relative_extra
 
+        # TODO: deal with non home files
+        # absolute_extra, relative_extra = gather_repo_files(this_dir / 'osx' / 'Library')
+        # repo_files_absolute += absolute_extra
+        # repo_files_relative += relative_extra
+
     link_files(repo_files_absolute, repo_files_relative, homedir_dir)
 
     # NOTE: this needs to be run with sudo to change permissions of plist files.

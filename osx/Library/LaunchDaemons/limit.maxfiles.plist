@@ -10,7 +10,7 @@
           <string>limit</string>
           <string>maxfiles</string>
           <string>65536</string>
-          <string>4294967296</string>
+          <string>2147483647</string>
         </array>
       <key>RunAtLoad</key>
         <true />

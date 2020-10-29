@@ -36,6 +36,9 @@ alias cdl="cd ~/projects/lawplus/lawplus/"
 
 export RAY_CLUSTER_DIR='~/projects/tablestakes/python/tablestakes/ml/ray_tune'
 export RAY_CLUSTER_YAML="${RAY_CLUSTER_DIR}/aws-simple.yaml"
+export RAY_WORKBENCH_YAML="${RAY_CLUSTER_DIR}/workbench.yaml"
+export RAY_WORKBENCH_YAML1="${RAY_CLUSTER_DIR}/workbench1.yaml"
+export RAY_WORKBENCH_YAML4="${RAY_CLUSTER_DIR}/workbench4.yaml"
 alias pushts="ray rsync-up ${RAY_CLUSTER_YAML} ~/projects/tablestakes/python/ /home/ubuntu/projects/tablestakes/python -A"
 alias pushtd="ray rsync-up ${RAY_CLUSTER_YAML} ~/data/tablestakes/datasets/  /home/ubuntu/data/tablestakes/datasets/ -A"
 
@@ -44,7 +47,15 @@ alias rsub="ray submit ${RAY_CLUSTER_YAML} ${RAY_CLUSTER_DIR}/tune_runner.py"
 alias ratch="ray attach ${RAY_CLUSTER_YAML}"
 alias rd="ray down ${RAY_CLUSTER_YAML}"
 alias ru="ray up ${RAY_CLUSTER_YAML} -y"
-
+alias workdown="ray down ${RAY_WORKBENCH_YAML}"
+alias workdown1="ray down ${RAY_WORKBENCH_YAML1}"
+alias workdown4="ray down ${RAY_WORKBENCH_YAML4}"
+alias workup="ray up ${RAY_WORKBENCH_YAML} -y"
+alias workup1="ray up ${RAY_WORKBENCH_YAML1} -y"
+alias workup4="ray up ${RAY_WORKBENCH_YAML4} -y"
+alias workat="ray attach ${RAY_WORKBENCH_YAML}"
+alias workat1="ray attach ${RAY_WORKBENCH_YAML1}"
+alias workat4="ray attach ${RAY_WORKBENCH_YAML4}"
 
 
 alias cdw="cd ~/projects/weblab/"
@@ -82,6 +93,7 @@ alias kubedelall_really="kubectl delete daemonsets,replicasets,services,deployme
 alias kubeshowall="kubectl -n kubeflow get shared"
 
 alias countlines="LC_CTYPE=C && LANG=C && git ls-files | xargs -n1 git blame --line-porcelain | sed -n 's/^author //p' | sort -f | uniq -ic | sort -nr"
+alias countpy="find . -name '*.py' | xargs wc -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'

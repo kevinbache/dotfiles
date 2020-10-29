@@ -87,6 +87,6 @@ if __name__ == '__main__':
         # repo_files_relative += relative_extra
 
     link_files(repo_files_absolute, repo_files_relative, homedir_dir)
-    subprocess.call("vim +'PlugInstall' +qa")
+    subprocess.call("vim +'PlugInstall' +qa", shell=True)
 
     # NOTE: this needs to be run with sudo to change permissions of plist files.

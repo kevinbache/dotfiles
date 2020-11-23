@@ -41,11 +41,14 @@ export RAY_CLUSTER_DIR="${HOME}/projects/tablestakes/python/tablestakes/ml2/tune
 export RAY_CLUSTER_YAML_DIR="${RAY_CLUSTER_DIR}/cluster_yamls"
 export RAY_CLUSTER_YAML="${RAY_CLUSTER_YAML_DIR}/cluster.yaml"
 
+alias car="conda activate ray"
+alias sar="car"
 alias pushts="ray rsync-up ${RAY_CLUSTER_YAML} ~/projects/tablestakes/python/ /home/ubuntu/projects/tablestakes/python -A"
 alias pushtd="ray rsync-up ${RAY_CLUSTER_YAML} ~/data/tablestakes/datasets/  /home/ubuntu/data/tablestakes/datasets/ -A"
 
-alias rsub1="ray submit ${RAY_CLUSTER_YAML} ${RAY_CLUSTER_DIR}/run_one.py"
-alias rsub="ray submit ${RAY_CLUSTER_YAML} ${RAY_CLUSTER_DIR}/tune_runner.py"
+#alias rsubone="ray submit ${RAY_CLUSTER_YAML} ${RAY_CLUSTER_DIR}/run_one.py"
+alias rdash="ray dashboard ${RAY_CLUSTER_YAML}"
+alias rsub="ray submit ${RAY_CLUSTER_YAML} ${RAY_CLUSTER_DIR}/tune_runner.py --verbose"
 alias ratch="ray attach ${RAY_CLUSTER_YAML}"
 alias rd="ray down ${RAY_CLUSTER_YAML}"
 alias ru="ray up ${RAY_CLUSTER_YAML} -y --verbose"

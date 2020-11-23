@@ -55,7 +55,7 @@ def link_files(repo_files_absolute, repo_files_relative, homedir_dir, verbose=Tr
             this_backup_dir = backup_dir.joinpath(repo_file_relative.parent)
             if not this_backup_dir.exists():
                 this_backup_dir.mkdir(parents=True, exist_ok=True)
-            vprint("  Backing up {:40} to {:40}".format(str(homedir_file), str(this_backup_dir)))
+            vprint("  Backing up {:76} to {:76}".format(str(homedir_file), str(this_backup_dir)))
             shutil.move(str(homedir_file), str(this_backup_dir))
 
         vprint("  Symlinking {:80} to {:80}".format(str(homedir_file), str(repo_file_absolute)))

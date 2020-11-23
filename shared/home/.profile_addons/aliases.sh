@@ -5,6 +5,9 @@ alias sudo='sudo '
 
 export ADDONS="~/.profile_addons"
 
+alias wrapon="tput rmam"
+alias wrapoff="tput smam"
+
 # new / reload commands
 alias newalias="vim ${ADDONS}/aliases.sh && source ${ADDONS}/aliases.sh"
 alias newfunc="vim ${ADDONS}/functions.sh && source ${ADDONS}/functions.sh"
@@ -37,6 +40,19 @@ alias cdds="cd ~/data/tablestakes/datasets/"
 alias cdtr="cd ~/projects/tablestakes/python/tablestakes/ml/ray_tune"
 alias cdl="cd ~/projects/lawplus/lawplus/"
 
+# RAY - LAWPLUS
+export LAW_CLUSTER_DIR="${HOME}/projects/lawplus/lawplus/tune"
+export LAW_CLUSTER_YAML_DIR="${LAW_CLUSTER_DIR}"
+export LAW_CLUSTER_YAML="${LAW_CLUSTER_YAML_DIR}/cluster.yaml"
+
+alias ldash="ray dashboard ${LAW_CLUSTER_YAML}"
+alias lsub="ray submit ${LAW_CLUSTER_YAML} ${LAW_CLUSTER_DIR}/tune_runner.py --verbose"
+alias latch="ray attach ${LAW_CLUSTER_YAML}"
+alias lu="ray up ${LAW_CLUSTER_YAML} -y --verbose"
+alias ld="ray down ${LAW_CLUSTER_YAML}"
+alias lmon="ray exec ${LAW_CLUSTER_YAML} 'tail -n 100 -f /tmp/ray/session_latest/logs/monitor*'"
+
+# RAY - TABLESTAKES
 export RAY_CLUSTER_DIR="${HOME}/projects/tablestakes/python/tablestakes/ml2/tune"
 export RAY_CLUSTER_YAML_DIR="${RAY_CLUSTER_DIR}/cluster_yamls"
 export RAY_CLUSTER_YAML="${RAY_CLUSTER_YAML_DIR}/cluster.yaml"
@@ -46,12 +62,12 @@ alias sar="car"
 alias pushts="ray rsync-up ${RAY_CLUSTER_YAML} ~/projects/tablestakes/python/ /home/ubuntu/projects/tablestakes/python -A"
 alias pushtd="ray rsync-up ${RAY_CLUSTER_YAML} ~/data/tablestakes/datasets/  /home/ubuntu/data/tablestakes/datasets/ -A"
 
-#alias rsubone="ray submit ${RAY_CLUSTER_YAML} ${RAY_CLUSTER_DIR}/run_one.py"
 alias rdash="ray dashboard ${RAY_CLUSTER_YAML}"
 alias rsub="ray submit ${RAY_CLUSTER_YAML} ${RAY_CLUSTER_DIR}/tune_runner.py --verbose"
 alias ratch="ray attach ${RAY_CLUSTER_YAML}"
-alias rd="ray down ${RAY_CLUSTER_YAML}"
 alias ru="ray up ${RAY_CLUSTER_YAML} -y --verbose"
+alias rd="ray down ${RAY_CLUSTER_YAML}"
+alias rmon="ray exec ${RAY_CLUSTER_YAML} 'tail -n 100 -f /tmp/ray/session_latest/logs/monitor*'"
 
 export RAY_WORKBENCH_YAML1="${RAY_CLUSTER_YAML_DIR}/workbench1.yaml"
 alias workup="ray up ${RAY_WORKBENCH_YAML1} -y --verbose"

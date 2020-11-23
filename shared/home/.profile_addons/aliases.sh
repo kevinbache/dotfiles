@@ -5,16 +5,19 @@ alias sudo='sudo '
 
 export ADDONS="~/.profile_addons"
 
+# new / reload commands
 alias newalias="vim ${ADDONS}/aliases.sh && source ${ADDONS}/aliases.sh"
 alias newfunc="vim ${ADDONS}/functions.sh && source ${ADDONS}/functions.sh"
 alias newgit="vim ~/.gitconfig"
 alias newssh="vim ~/.ssh/config"
 alias newvim="vim ~/.vimrc"
 
+# edit / reload commands
 alias ein="vim ~/.inputrc && include ~/.inputrc"
 alias eprof="vim ~/.bash_profile && source ~/.bash_profile"
 alias eprmpt="vim ${ADDONS}/bash_prompt.sh && source ${ADDONS}/bash_prompt.sh"
 
+# cd commands
 alias cdce="cd ~/projects/chillpill_examples"
 alias cdc="cd ~/projects/chillpill"
 alias cds="cd ~/projects/spin"
@@ -34,7 +37,7 @@ alias cdds="cd ~/data/tablestakes/datasets/"
 alias cdtr="cd ~/projects/tablestakes/python/tablestakes/ml/ray_tune"
 alias cdl="cd ~/projects/lawplus/lawplus/"
 
-export RAY_CLUSTER_DIR='~/projects/tablestakes/python/tablestakes/ml/ray_tune'
+export RAY_CLUSTER_DIR="${HOME}/projects/tablestakes/python/tablestakes/ml2/tune"
 export RAY_CLUSTER_YAML_DIR="${RAY_CLUSTER_DIR}/cluster_yamls"
 export RAY_CLUSTER_YAML="${RAY_CLUSTER_YAML_DIR}/cluster.yaml"
 
@@ -45,23 +48,33 @@ alias rsub1="ray submit ${RAY_CLUSTER_YAML} ${RAY_CLUSTER_DIR}/run_one.py"
 alias rsub="ray submit ${RAY_CLUSTER_YAML} ${RAY_CLUSTER_DIR}/tune_runner.py"
 alias ratch="ray attach ${RAY_CLUSTER_YAML}"
 alias rd="ray down ${RAY_CLUSTER_YAML}"
-alias ru="ray up ${RAY_CLUSTER_YAML} -y"
+alias ru="ray up ${RAY_CLUSTER_YAML} -y --verbose"
 
-
-export RAY_WORKBENCH_YAML="${RAY_CLUSTER_YAML_DIR}/workbench.yaml"
 export RAY_WORKBENCH_YAML1="${RAY_CLUSTER_YAML_DIR}/workbench1.yaml"
+alias workup="ray up ${RAY_WORKBENCH_YAML1} -y --verbose"
+alias workat="ray attach ${RAY_WORKBENCH_YAML1}"
+alias workdown="ray down ${RAY_WORKBENCH_YAML1}"
+alias wu="workup"
+alias wa="workat"
+alias wd="workdown"
+
+export RAY_WORKBENCH_YAML2="${RAY_CLUSTER_YAML_DIR}/workbench2.yaml"
+alias workup2="ray up ${RAY_WORKBENCH_YAML2} -y --verbose"
+alias workat2="ray attach ${RAY_WORKBENCH_YAML2}"
+alias workdown2="ray down ${RAY_WORKBENCH_YAML2}"
+alias wu2="workup2"
+alias wa2="workat2"
+alias wd2="workdown2"
+
 export RAY_WORKBENCH_YAML4="${RAY_CLUSTER_YAML_DIR}/workbench4.yaml"
-
-alias workdown="ray down ${RAY_WORKBENCH_YAML}"
-alias workdown1="ray down ${RAY_WORKBENCH_YAML1}"
-alias workdown4="ray down ${RAY_WORKBENCH_YAML4}"
-alias workup="ray up ${RAY_WORKBENCH_YAML} -y"
-alias workup1="ray up ${RAY_WORKBENCH_YAML1} -y"
-alias workup4="ray up ${RAY_WORKBENCH_YAML4} -y"
-alias workat="ray attach ${RAY_WORKBENCH_YAML}"
-alias workat1="ray attach ${RAY_WORKBENCH_YAML1}"
+alias workup4="ray up ${RAY_WORKBENCH_YAML4} -y --verbose"
 alias workat4="ray attach ${RAY_WORKBENCH_YAML4}"
+alias workdown4="ray down ${RAY_WORKBENCH_YAML4}"
+alias wu4="workup4"
+alias wa4="worka4"
+alias wd4="workdown4"
 
+alias findg="find * | grep"
 
 alias cdw="cd ~/projects/weblab/"
 #alias runweb="web-ext run --source-dir ~/projects/weblab/build/ --verbose --pref startup.homepage_welcome_url=https://example.com"

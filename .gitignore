@@ -1,7 +1,12 @@
 *.py[cod]
 
+.DS_Store
+.idea
+
 # C extensions
 *.so
+
+**/neptune.sh
 
 # Packages
 *.egg

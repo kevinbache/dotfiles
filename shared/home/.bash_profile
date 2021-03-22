@@ -63,3 +63,5 @@ for file in ~/.profile_addons/*; do
 done;
 unset file;
 
+cd ~
+

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# added by Anaconda3 2018.12 installer
+# added by Anaconda3 2018.12 installer. still holds, 2020.10.29
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$(CONDA_REPORT_ERRORS=false '${HOME}/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
@@ -16,3 +16,4 @@ else
 fi
 unset __conda_setup
 # <<< conda init <<<
+
